@@ -31,3 +31,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('auth/github/callback', 'Auth\AuthController@handleGithubProviderCallback');
 });
 
+
+
+Route::get('csstransition', function () {
+    return view('tinkering.csstransition');
+});

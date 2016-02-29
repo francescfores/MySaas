@@ -214,6 +214,7 @@ return [
         # https://github.com/acacha/llum
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         #llum_aliases
 
     ],

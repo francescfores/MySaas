@@ -27,8 +27,8 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('auth/{provider}', 'Auth\AuthController@redirectToAuthenticationServiceProvider');
-    Route::get('auth/{provider}/callback', 'Auth\AuthController@handleAuthenticationServiceProviderCallback');
+    Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
+    Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
 });
 
 Route::get('csstransition', function () {

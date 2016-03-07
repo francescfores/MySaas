@@ -84,6 +84,7 @@ class AuthController extends Controller
             return \Redirect::to('auth'.$proveidor);
         }
         dd($user);
+
     }
 
 

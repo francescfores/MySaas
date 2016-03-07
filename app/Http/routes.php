@@ -31,8 +31,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('auth/{provider}/callback', 'Auth\AuthController@handleAuthenticationServiceProviderCallback');
 });
 
-
-
 Route::get('csstransition', function () {
     return view('tinkering.csstransition');
 });

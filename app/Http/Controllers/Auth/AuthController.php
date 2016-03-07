@@ -72,11 +72,19 @@ class AuthController extends Controller
     }
 
     protected function redirectToAuthenticationServiceProvider ($provider){
-        return Socialite::driver('github')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
-    protected function handleAuthenticationServiceProviderCallback (){
+    protected function handleAuthenticationServiceProviderCallback ($proveidor){
        // return Socialite::driver('github')->redirect();
+
+        try{
+            $user = Socialite::driver($proveidor)->user();
+        }catch (Execption $e){
+            return \Redirect::to('auth'.$proveidor);
+        }
+
+        dd($user);
     }
 
 

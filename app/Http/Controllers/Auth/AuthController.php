@@ -83,7 +83,6 @@ class AuthController extends Controller
         }catch (Execption $e){
             return \Redirect::to('auth'.$proveidor);
         }
-
         dd($user);
     }
 

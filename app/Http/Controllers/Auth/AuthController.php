@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Laravel\Socialite\Facades\Socialite;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -70,7 +71,13 @@ class AuthController extends Controller
         ]);
     }
 
-    protected function redirectToGithubProvider (){
-
+    protected function redirectToAuthenticationServiceProvider ($provider){
+        return Socialite::driver('github')->redirect();
     }
+
+    protected function handleAuthenticationServiceProviderCallback (){
+       // return Socialite::driver('github')->redirect();
+    }
+
+
 }

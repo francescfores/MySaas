@@ -29,6 +29,6 @@ $factory->define(Subscription::class, function (Faker\Generator $faker) {
         'stripe_plan'=>'monthly',
         'name' => $faker->name,
         'quantity' => 950,
-        'created_at' => Carbon::now()->addDay($faker->randomDigit)
+        'created_at' => Carbon::now()->addDay($faker->numberBetween(0,30))
     ];
 });

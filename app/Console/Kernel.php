@@ -26,5 +26,16 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        //Diari
+//        $schedule->call(function () {
+//            DB::table('recent_users')->delete();
+//        })->daily();
+        //Hora concreta
+        $schedule->call(function () {
+            //TODO calcular beneficis diaris
+
+        })->dailyAt('23:59');
+
     }
 }

@@ -161,6 +161,8 @@ return [
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+
+        Laravel\Cashier\CashierServiceProvider::class,
     ],
 
     /*

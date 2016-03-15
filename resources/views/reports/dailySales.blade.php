@@ -31,7 +31,6 @@
         </script>
 @endsection
 
-{{ json_encode($days) }} || {{ json_encode($totals) }}
 
 @section('custom_css')
         <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">

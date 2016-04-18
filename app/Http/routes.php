@@ -30,9 +30,20 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
     Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
     Route::get('reports/dailySales', 'ReportsController@dailySales');
+    Route::get('reports/jspdf', function(){
+        return view('reports/jspdf');
+    });
     Route::get('downloadInvoice', 'PDFController@downloadInvoice');
+    Route::get('users','UsersController@index');
 
+    //Route::resource('users', 'UsersController');
+    Route::post('users/{id}','UsersController@store');
+    Route::put('users','UsersController@update');
+    Route::delete('users','UsersController@destroy');
 
+//    Event::listen('user.change', function(){
+//        Cache::forget('query.users');
+//    });
 });
 
 Route::get('csstransition', function () {

@@ -62,7 +62,6 @@ class PDFController extends Controller
 
     public function view( $data)
     {
-
         return View::make('receipt',$data);
     }
 

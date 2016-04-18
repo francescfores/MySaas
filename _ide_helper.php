@@ -1292,7 +1292,11 @@ namespace {
         public static function createUserProvider($provider){
             return \Illuminate\Auth\AuthManager::createUserProvider($provider);
         }
-        
+
+        public static function User()
+        {
+        }
+
     }
 
 

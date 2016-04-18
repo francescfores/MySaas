@@ -44,6 +44,8 @@ Route::group(['middleware' => ['web']], function () {
 //    Event::listen('user.change', function(){
 //        Cache::forget('query.users');
 //    });
+
+    Route::get('profile', 'ProfileController@show');
 });
 
 Route::get('csstransition', function () {

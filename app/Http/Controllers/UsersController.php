@@ -47,7 +47,7 @@ class UsersController extends Controller
     public function destroy(){
         User::destroy();
 
-        $this->fireUserChanged();
+        Event::fire('user.change');
     }
 
 
